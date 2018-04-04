@@ -1,0 +1,287 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #414757;
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 10px;
+    padding-left: 10px;
+    color: #cbd6fe;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+h2 {
+    font-weight: 100;
+    color: #ffdac0;
+}
+
+h3 {
+    color: #60cebb;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+h4 {
+    letter-spacing: 10px;
+    color: #ffdac0;
+    background-color: #6d6c6c;
+    margin: 0 10px 20px 10px;
+    text-align: center;
+    font-size: .8em;
+}
+
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    min-width: 320px;
+    width: 100%;
+    height: 400px;
+    padding: 1%;
+    background-color: #263343;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.deck .card {
+    height: 20%;
+    width: 20%;
+    background: #3C4B5E;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    margin: 6px;
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    cursor: default;
+    font-size: 2em;
+}
+
+.deck .card.match {
+    cursor: default;
+    font-size: 2em;
+}
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 290px;
+    margin-bottom: 10px;
+    color: white;
+    letter-spacing: 1px;
+    font-size: .8em;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+    padding: 1px;
+}
+
+.score-panel .moves {
+    margin-left: 10px;
+}
+
+.score-panel .time {
+    font-size: .8em;
+    margin-left: 12px;
+}
+
+.score-panel .actions {
+    float: right;
+    color: #62bfec;
+}
+
+.score-panel .redo {
+    cursor: pointer;
+}
+
+.score-panel .skip-level {
+    font-size: .8em;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+
+/*
+ * Styles by level
+ */
+
+/* Level 1 */
+
+.deck .card.open.level1 {
+    background-color: #02b3e4;
+}
+
+.deck .card.match.level1 {
+    background-color: #60cebb;
+}
+
+.score-panel .stars .level1 {
+    color: #60cebb;
+}
+
+/* Level 2 */
+
+.deck .card.open.level2 {
+    background: #7504f8
+}
+
+.deck .card.match.level2 {
+    background: #f3a439;
+}
+
+.score-panel .stars .level2 {
+    color: #f3a439;
+}
+
+/* Level 3 */
+
+.deck .card.open.level3 {
+    background: #4766f2;
+}
+
+.deck .card.match.level3 {
+    background: #ff006d;
+}
+
+.score-panel .stars .level3 {
+    color: #ff006d;
+}
+
+/* 
+ * Dialog 
+ */
+
+#congrats {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    padding-top: 150px;
+    border: none;
+    background-color: #414757;
+    color: white;
+}
+
+#playAgain {
+    border: none;
+    background-color: #62bfec;
+    color: white;
+    height: 40px;
+    font-size: .9em;
+    border-radius: 10px;
+    margin: 10px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+}
+
+#lock {
+    color: #cbd6fe;
+    font-size: 50px;
+}
+
+.final-stats {
+    margin-top: 10px;
+    font-size: .9em;
+}
+
+/* 
+ * Responsive styles
+ */
+
+ /* Tablet */
+
+@media screen and (min-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+    
+    .deck {
+        height: 500px;
+    }
+
+    .score-panel {
+        width: 340px;
+        font-size: .9em;
+    }
+
+    .score-panel .skip-level {
+        margin-left: 20px;
+    }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width: 700px) {
+    .deck {
+       max-width: 660px;
+       min-height: 680px;
+       margin: 0 0 3em;
+       border-radius: 10px;
+       padding: 34px;
+    }
+
+    .deck .card {
+        height: 125px;
+        width: 125px;
+        margin: 0;
+    }
+
+}

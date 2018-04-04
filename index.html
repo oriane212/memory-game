@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dialog-polyfill.css"> <!-- downloaded from github.com/GoogleChrome/dialog-polyfill -->
+</head>
+<body>
+    <!-- dialog must be direct child of body for polyfill to work -->
+    <dialog id="congrats">
+        <i id="lock" class="fa"></i>
+        <h2 id="congratsMsg"></h2>
+        <h3>Your Score: <span id="starScore"></span></h3>
+        <p class="final-stats">
+            <span id="moveScore"></span> | <span class="min"></span>
+            <span class="sec"></span>
+        </p>
+        <button id="playAgain"></button>
+    </dialog>
+
+    <div class="container">
+        
+        <header>
+            <h1>MEMORY GAME</h1>
+            <h4>LEVEL <span class="level"></span></h4>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars"></ul>
+            <span class="moves">0 Moves</span>
+            <span class="time">
+                <span class="min">0 : </span>
+                <span class="sec">00</span>
+            </span>
+            <div class="actions">
+                <span class="redo">
+                    <i class="fa fa-redo-alt"></i>
+                </span>
+                <span class="skip-level">skip level</span>
+            </div>
+        </section>
+
+        <ul class="deck"></ul>
+    </div>
+    
+    <!-- audio files downloaded from noiseforfun.com -->
+    <audio id="glue" src="./audio/NFF-glue.wav"></audio>
+    <audio id="select" src="./audio/NFF-select.wav"></audio>
+    <audio id="tinyWhip" src="./audio/NFF-tiny-whip.wav"></audio>
+    <audio id="doubleWhip" src="./audio/NFF-double-whip.wav"></audio>
+    <audio id="lose" src="./audio/NFF-lose.wav"></audio>
+    <audio id="glockenGood" src="./audio/NFF-glocken-good.wav"></audio>
+    <audio id="fruit" src="./audio/NFF-fruit-collected.wav"></audio>
+
+    <script src="js/dialog-polyfill.js"></script> <!-- downloaded from github.com/GoogleChrome/dialog-polyfill -->
+    <script src="js/app.js"></script>
+</body>
+</html>
