@@ -2,7 +2,7 @@
 
 The Memory Game is a game of matching cards built with JavaScript, DOM selectors and Event Listeners.
 
-Play the game: https://oriane212.github.io/memory-game
+Play the game: https://oriane212.github.io/memory-game/
 
 ## Game features
 - 3 decks of cards, each its own level with its own styles
