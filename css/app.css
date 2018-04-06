@@ -61,9 +61,9 @@ h4 {
  */
 
 .deck {
-    width: 300px;
-    height: 300px;
-    padding: 10px;
+    width: 95%;
+    height: 320px;
+    padding: 12px;
     background-color: #263343;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
@@ -241,11 +241,9 @@ h4 {
  * Responsive styles
  */
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 350px) {
     .deck {
-        width: 400px;
-        height: 400px;
-        padding: 12px;
+        height: 350px;
     }
 }
 
