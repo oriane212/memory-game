@@ -1,8 +1,23 @@
 # Memory Game
 
-The Memory Game is a game of matching cards built with JavaScript, DOM selectors and Event Listeners.
+The object of the game is to locate the matching pairs of cards in as few moves as possible.
 
 Play the game: https://oriane212.github.io/memory-game/
+
+## Dependencies
+- `app.js`
+- `app.css`
+- Font Awesome icons (v5, CDN in `index.html`)
+- Sounds in `audio` (sources listed in index.html)
+- `dialog-polyfill.js` and `dialog-polyfill.css` (included from github.com/GoogleChrome/dialog-polyfill)
+
+## How to run the game
+1. Clone this repo
+2. Open `index.html` file in browser
+3. Play game!
+
+## How to Play
+Make a move by clicking two cards to flip them over.
 
 ## Game features
 - 3 decks of cards, each its own level with its own styles
