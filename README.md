@@ -4,6 +4,8 @@ The object of the game is to locate the matching pairs of cards in as few moves 
 
 Play the game: https://oriane212.github.io/memory-game/
 
+![demo of game play](memorygame.gif)
+
 ## Dependencies
 - `app.js`
 - `app.css`
